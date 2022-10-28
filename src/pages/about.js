@@ -1,6 +1,5 @@
 // Stap 1: Importeer React
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 // Step 2: Definieer je component
