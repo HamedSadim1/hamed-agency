@@ -6,8 +6,17 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        /*
+         * De volledige URL van je Headless WordPress site's GraphQL API.
+         * Voorbeeld : "https://www.example-site.com/graphql"
+         */
+        url: "http://hamed-agency.local/graphql",
+      },
+    },
   ],
 }
