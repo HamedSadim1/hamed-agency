@@ -9,16 +9,15 @@ import {
   fullName,
 } from "./artist.module.css"
 
-// Imports
-
 const Artist = ({ artist, slug }) => {
-  const profile = getImage(artist.artistMeta.profilePicture.localFile)
+  const profile = getImage(artist.artistMeta.profilePicture?.localFile)
+
   return (
     <Link className={wrapper} to={slug}>
       <GatsbyImage
         className={image}
         image={profile}
-        alt={artist.artistMeta.profilePicture.altText}
+        alt={artist.artistMeta.profilePicture?.altText}
       />
       <article className={artistInfo}>
         {artist.artistMeta.artistName && (
